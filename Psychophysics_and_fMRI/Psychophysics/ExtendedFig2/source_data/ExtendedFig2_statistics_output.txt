@@ -1,0 +1,83 @@
+#####################
+Original vs. VF shift:
+#####################
+
+Generalized linear mixed-effects model fit by PL
+
+Model information:
+    Number of observations            1520
+    Fixed effects coefficients           4
+    Random effects coefficients         39
+    Covariance parameters                2
+    Distribution                    Binomial
+    Link                            Logit 
+    FitMethod                       MPL   
+
+Formula:
+    recog_rate ~ 1 + trialtype*manip + (1 | subject) + (1 | trialnum)
+
+Model fit statistics:
+    AIC       BIC       LogLikelihood    Deviance
+    6872.3    6904.2    -3430.1          6860.3  
+
+Fixed effects coefficients (95% CIs):
+    Name                                    Estimate     SE         tStat       DF      pValue        Lower       Upper    
+    {'(Intercept)'                 }          -1.3708    0.16664      -8.226    1516    4.1187e-16     -1.6977      -1.0439
+    {'trialtype_post'              }           1.7716    0.14283      12.403    1516    1.0214e-33      1.4914       2.0517
+    {'manip_VFshift'               }        -0.074429    0.19956    -0.37298    1516       0.70922    -0.46586      0.31701
+    {'trialtype_post:manip_VFshift'}         -0.54218    0.25796     -2.1018    1516      0.035733     -1.0482    -0.036192
+
+Random effects covariance parameters:
+Group: subject (30 Levels)
+    Name1                  Name2                  Type           Estimate
+    {'(Intercept)'}        {'(Intercept)'}        {'std'}        0.56994 
+
+Group: trialnum (9 Levels)
+    Name1                  Name2                  Type           Estimate
+    {'(Intercept)'}        {'(Intercept)'}        {'std'}        0.21234 
+
+Group: Error
+    Name                        Estimate
+    {'sqrt(Dispersion)'}        1       
+
+#####################
+Catch vs. VF shift:
+#####################
+
+Generalized linear mixed-effects model fit by PL
+
+Model information:
+    Number of observations            1524
+    Fixed effects coefficients           4
+    Random effects coefficients         39
+    Covariance parameters                2
+    Distribution                    Binomial
+    Link                            Logit 
+    FitMethod                       MPL   
+
+Formula:
+    recog_rate ~ 1 + trialtype*manip + (1 | subject) + (1 | trialnum)
+
+Model fit statistics:
+    AIC     BIC     LogLikelihood    Deviance
+    6910    6942    -3449            6898    
+
+Fixed effects coefficients (95% CIs):
+    Name                                    Estimate    SE         tStat      DF      pValue        Lower       Upper  
+    {'(Intercept)'                 }         -1.1917    0.18833    -6.3277    1520    3.2662e-10     -1.5611    -0.8223
+    {'trialtype_post'              }         0.37897    0.14186     2.6715    1520     0.0076311     0.10072    0.65723
+    {'manip_VFshift'               }        -0.27572    0.19803    -1.3924    1520       0.16402    -0.66416    0.11271
+    {'trialtype_post:manip_VFshift'}         0.86019     0.2589     3.3224    1520    0.00091355     0.35234      1.368
+
+Random effects covariance parameters:
+Group: subject (30 Levels)
+    Name1                  Name2                  Type           Estimate
+    {'(Intercept)'}        {'(Intercept)'}        {'std'}        0.50626 
+
+Group: trialnum (9 Levels)
+    Name1                  Name2                  Type           Estimate
+    {'(Intercept)'}        {'(Intercept)'}        {'std'}        0.37881 
+
+Group: Error
+    Name                        Estimate
+    {'sqrt(Dispersion)'}        1       

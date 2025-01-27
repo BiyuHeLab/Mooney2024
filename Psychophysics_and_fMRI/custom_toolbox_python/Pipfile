@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+scipy = "*"
+scikit-learn = "*"
+scikit-image = "*"
+pandas = "*"
+matplotlib = "*"
+h5py = "*"
+tqdm = "*"
+joblib = "*"
+importlib-metadata = ">=6.0.0"
+rsatoolbox = "*"
+nibabel = "*"
+seaborn = "*"
+nilearn = "*"
+urllib3 = "==1.26.6"
+nltools = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

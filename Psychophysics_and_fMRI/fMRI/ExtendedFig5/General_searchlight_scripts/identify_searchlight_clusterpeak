@@ -1,0 +1,9 @@
+For neural distance analysis:
+cd Mooney_PriorInvariance/InvarianceMap_fmri/Data/fMRISubjectData/Searchlight_rawdist_zmaps/onesamp_t12mmEMP/
+fslmaths less_zero_tfce_corrp_tstat1.nii.gz -thr 0.95 -bin -mul less_zero_tstat1.nii.gz less_zero_thresh_tstat1.nii.gz
+cluster --in=less_zero_thresh_tstat1.nii.gz --thresh=0.01 --oindex=cluster_index --olmax=lmax.txt --osize=cluster_size
+
+For model-based RSA:
+cd BigPurpleCluster/Searchlight_Spearman_H2d/onesamp_t12mm/
+fslmaths greater_zero_tfce_corrp_tstat1.nii.gz -thr 0.95 -bin -mul greater_zero_tstat1.nii.gz greater_zero_thresh_tstat1.nii.gz
+cluster --in=greater_zero_thresh_tstat1.nii.gz --thresh=0.01 --oindex=grot_cluster_index --olmax=grot_lmax.txt --osize=grot_cluster_size
